@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Manager</title>
+</head>
+<body>
+  <h2>Task Manager</h2>
+  <input id="taskInput" placeholder="New task">
+  <button onclick="addTask()">Add</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    const taskList = document.getElementById("taskList");
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    function render() {
+      taskList.innerHTML = "";
+      tasks.forEach((t, i) => {
+        taskList.innerHTML += `<li>${t} <button onclick="delTask(${i})">X</button></li>`;
+      });
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+
+    function addTask() {
+      const val = document.getElementById("taskInput").value;
+      if(val) { tasks.push(val); render(); }
+    }
+
+    function delTask(i) {
+      tasks.splice(i, 1); render();
+    }
+
+    render();
+  </script>
+</body>
+</html>
