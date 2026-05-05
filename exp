@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body { font-family: Arial; margin: 0; }
+    header, footer { background: #333; color: white; text-align: center; padding: 1em; }
+    section { padding: 2em; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; }
+    .card { background: #f4f4f4; padding: 1em; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <header><h1>My Portfolio</h1></header>
+
+  <!-- About Section -->
+  <section>
+    <h2>About Me</h2>
+    <p>Hello! I’m a web developer passionate about building responsive and interactive applications.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5 & CSS3</li>
+      <li>JavaScript & React</li>
+      <li>Node.js & Express</li>
+      <li>MongoDB</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section>
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">Portfolio Website</div>
+      <div class="card">Task Manager App</div>
+      <div class="card">E-commerce Store</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section>
+    <h2>Contact</h2>
+    <p>Email: myname@example.com</p>
+    <p>LinkedIn: linkedin.com/in/myprofile</p>
+  </section>
+
+  <footer><p>© 2026 My Name</p></footer>
+</body>
+</html>
+
+
